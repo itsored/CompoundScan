@@ -1,0 +1,254 @@
+2026-01-19 09:19:44 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:19:44 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:19:44 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:19:44 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:19:44 [info]: Environment: development
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:21:12 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:21:13 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:21:13 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:21:13 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:21:13 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:21:13 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:21:13 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:21:20 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:22:07 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:22:09 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:22:09 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:22:09 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:22:09 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:22:09 [info]: Environment: development
+2026-01-19 09:22:38 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:22:39 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:22:39 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:22:39 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:22:39 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:22:39 [info]: Environment: development
+2026-01-19 09:25:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:25:12 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:25:12 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:25:21 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:25:21 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:25:21 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:25:21 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:25:21 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:25:21 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:25:41 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:25:41 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:25:41 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:26:07 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:26:07 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:26:07 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:29:27 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:29:27 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:29:27 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:29:27 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events"}
+2026-01-19 09:29:27 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:29:27 [error]: Database query error {"error":"","query":"SELECT \n         address,\n         label,\n         address_type,\n         transaction_count,\n         first_seen_at,\n         last_seen_at\n       FROM addresses\n       ORDER BY transaction_count DESC\n       LIMIT $1"}
+2026-01-19 09:30:05 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:30:05 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:30:05 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:30:05 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:35:54 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:35:54 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:35:54 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:35:54 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:35:58 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:35:58 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:35:58 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:35:58 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:40:50 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:40:51 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:40:51 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:40:51 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:40:51 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:40:51 [info]: Environment: development
+2026-01-19 09:42:52 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:42:54 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:42:54 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:42:54 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:42:54 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:42:54 [info]: Environment: development
+2026-01-19 09:45:04 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:45:05 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:45:05 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:45:05 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:45:05 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:45:05 [info]: Environment: development
+2026-01-19 09:45:07 [error]: Unhandled error etherscan.hasApiKey is not a function
+TypeError: etherscan.hasApiKey is not a function
+    at file:///Users/Shared/Odero/compoundscan/src/api/routes/etherscan.js:8:28
+    at Layer.handle [as handle_request] (/Users/Shared/Odero/compoundscan/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/Shared/Odero/compoundscan/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/Shared/Odero/compoundscan/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/Shared/Odero/compoundscan/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/Shared/Odero/compoundscan/node_modules/express/lib/router/index.js:284:15
+    at router.process_params (/Users/Shared/Odero/compoundscan/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/Shared/Odero/compoundscan/node_modules/express/lib/router/index.js:280:10)
+    at router.handle (/Users/Shared/Odero/compoundscan/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/Shared/Odero/compoundscan/node_modules/express/lib/router/index.js:47:12)
+2026-01-19 09:46:19 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:46:20 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:46:20 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:46:20 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:46:20 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:46:20 [info]: Environment: development
+2026-01-19 09:51:15 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:51:17 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:51:17 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:51:17 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:51:17 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:51:17 [info]: Environment: development
+2026-01-19 09:54:35 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:54:35 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:54:35 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:54:35 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:54:39 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:54:39 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:54:39 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:54:39 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:54:48 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM transactions t "}
+2026-01-19 09:54:48 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM transactions t "}
+2026-01-19 09:54:48 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:54:49 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:54:49 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:54:49 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:54:49 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:54:49 [info]: Environment: development
+2026-01-19 09:54:51 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM addresses "}
+2026-01-19 09:54:51 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM addresses "}
+2026-01-19 09:56:37 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:56:39 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:56:39 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:56:39 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:56:39 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:56:39 [info]: Environment: development
+2026-01-19 09:57:29 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 09:57:30 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 09:57:30 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 09:57:30 [warn]: Database not connected. Some features may not work.
+2026-01-19 09:57:30 [info]: CompoundScan API server running on port 3001
+2026-01-19 09:57:30 [info]: Environment: development
+2026-01-19 09:59:29 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:59:29 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 09:59:29 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 09:59:29 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 10:00:42 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM addresses "}
+2026-01-19 10:00:42 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM addresses "}
+2026-01-19 10:00:53 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM transactions t "}
+2026-01-19 10:00:53 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM transactions t "}
+2026-01-19 10:00:54 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 10:00:54 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 10:00:54 [error]: Database query error {"error":"","query":"\n      SELECT event_name, COUNT(*) as count\n      FROM events\n      GROUP BY event_name\n      ORDER BY count DESC\n    "}
+2026-01-19 10:00:54 [error]: Database query error {"error":"","query":"SELECT COUNT(*) FROM events e "}
+2026-01-19 10:04:02 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 10:04:04 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 10:04:04 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 10:04:04 [warn]: Database not connected. Some features may not work.
+2026-01-19 10:04:04 [info]: CompoundScan API server running on port 3001
+2026-01-19 10:04:04 [info]: Environment: development
+2026-01-19 10:24:06 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 10:24:06 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 10:24:06 [warn]: Database not connected. Some features may not work.
+2026-01-19 10:24:06 [info]: CompoundScan API server running on port 3001
+2026-01-19 10:24:06 [info]: Environment: development
+2026-01-19 10:30:59 [info]: SIGTERM received. Shutting down gracefully...
+2026-01-19 10:31:05 [error]: Database query error {"error":"","query":"SELECT NOW()"}
+2026-01-19 10:31:05 [error]: Database connection failed
+AggregateError [ECONNREFUSED]: 
+    at /Users/Shared/Odero/compoundscan/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async query (file:///Users/Shared/Odero/compoundscan/src/db/index.js:34:20)
+    at async Object.checkConnection (file:///Users/Shared/Odero/compoundscan/src/db/index.js:90:20)
+    at async start (file:///Users/Shared/Odero/compoundscan/src/index.js:66:23) {"code":"ECONNREFUSED"}
+2026-01-19 10:31:05 [warn]: Database not connected. Some features may not work.
+2026-01-19 10:31:05 [info]: CompoundScan API server running on port 3001
+2026-01-19 10:31:05 [info]: Environment: development

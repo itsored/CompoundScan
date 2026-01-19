@@ -1,0 +1,57 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": true, "name": "src", "type": "address" },
+      { "indexed": true, "name": "recipient", "type": "address" },
+      { "indexed": true, "name": "token", "type": "address" },
+      { "indexed": false, "name": "amount", "type": "uint256" }
+    ],
+    "name": "RewardClaimed",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "name": "comet", "type": "address" },
+      { "name": "src", "type": "address" },
+      { "name": "shouldAccrue", "type": "bool" }
+    ],
+    "name": "getRewardOwed",
+    "outputs": [
+      {
+        "components": [
+          { "name": "token", "type": "address" },
+          { "name": "owed", "type": "uint256" }
+        ],
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "name": "comet", "type": "address" },
+      { "name": "src", "type": "address" },
+      { "name": "shouldAccrue", "type": "bool" }
+    ],
+    "name": "claim",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "name": "comet", "type": "address" },
+      { "name": "src", "type": "address" },
+      { "name": "to", "type": "address" },
+      { "name": "shouldAccrue", "type": "bool" }
+    ],
+    "name": "claimTo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
+
