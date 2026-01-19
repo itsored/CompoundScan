@@ -1,30 +1,30 @@
 # CompoundScan 🔍
 
-A comprehensive blockchain explorer for indexing and visualizing all activities of the **Compound V3 (Comet)** DeFi protocol, starting with Ethereum Sepolia testnet.
+A comprehensive blockchain explorer for visualizing all activities of the **Compound V3 (Comet)** DeFi protocol on Ethereum Sepolia testnet.
 
 ![CompoundScan](https://img.shields.io/badge/Compound-V3%20Explorer-00d395?style=for-the-badge)
 ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=nodedotjs)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-4169E1?style=for-the-badge&logo=postgresql)
 ![React](https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react)
+![Etherscan](https://img.shields.io/badge/Etherscan-API-21325B?style=for-the-badge)
 
 ## 🎯 Project Overview
 
-CompoundScan indexes and tracks all protocol activities including:
+CompoundScan tracks and displays all protocol activities including:
 
 - **Supply Events** - Base token and collateral deposits
 - **Withdraw Events** - Borrows and collateral withdrawals  
 - **Liquidations** - AbsorbCollateral and AbsorbDebt events
-- **Reward Claims** - COMP token distributions
 - **Transfers** - Token movements within the protocol
-- **Governance Actions** - Parameter changes and upgrades
+- **All Transactions** - Function calls to the Comet contract
 
 ### Key Features
 
-- 📊 **Real-time Indexing** - Continuous monitoring of all Comet contracts
+- 📊 **Live Protocol Stats** - Real-time supply, borrow, and utilization data
 - 🔎 **Address Tracking** - Complete activity history for any address
-- 📈 **Protocol Analytics** - Statistics and metrics dashboard
-- 🔗 **Event Decoding** - Human-readable transaction and event data
-- 🌐 **Multi-network Support** - Start with Sepolia, expand to Mainnet
+- 📅 **Query Explorer** - Search addresses by date range with full activity details
+- 🔗 **Event Browser** - Filter and explore all protocol events
+- 📈 **Transaction History** - View all contract interactions
+- 🌐 **Etherscan Integration** - No database required, fetches data directly from Etherscan API
 
 ## 🏗️ Architecture
 
@@ -34,16 +34,18 @@ CompoundScan indexes and tracks all protocol activities including:
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                  │
 │  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐      │
-│  │   Indexer    │───▶│  PostgreSQL  │◀───│   REST API   │      │
-│  │   Service    │    │   Database   │    │   Server     │      │
+│  │   Ethereum   │    │  Etherscan   │    │   Express    │      │
+│  │     RPC      │    │     API      │    │   Backend    │      │
 │  └──────────────┘    └──────────────┘    └──────────────┘      │
-│         │                                        │              │
-│         │                                        │              │
-│         ▼                                        ▼              │
-│  ┌──────────────┐                        ┌──────────────┐      │
-│  │   Ethereum   │                        │    React     │      │
-│  │     RPC      │                        │   Frontend   │      │
-│  └──────────────┘                        └──────────────┘      │
+│         │                   │                   │               │
+│         │                   │                   │               │
+│         └───────────────────┴───────────────────┘               │
+│                             │                                    │
+│                             ▼                                    │
+│                     ┌──────────────┐                            │
+│                     │    React     │                            │
+│                     │   Frontend   │                            │
+│                     └──────────────┘                            │
 │                                                                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -55,23 +57,15 @@ compoundscan/
 ├── src/                          # Backend source code
 │   ├── api/                      # REST API routes
 │   │   ├── routes/
-│   │   │   ├── events.js         # Events endpoints
-│   │   │   ├── transactions.js   # Transactions endpoints
-│   │   │   ├── addresses.js      # Address endpoints
-│   │   │   └── stats.js          # Statistics endpoints
+│   │   │   ├── etherscan.js      # Etherscan API endpoints
+│   │   │   └── live.js           # Live RPC data endpoints
 │   │   └── index.js              # API router
 │   ├── config/                   # Configuration
 │   │   ├── abi/                  # Contract ABIs
 │   │   ├── contracts.js          # Contract addresses
 │   │   └── index.js              # Config loader
-│   ├── db/                       # Database layer
-│   │   ├── schema.sql            # Database schema
-│   │   ├── index.js              # DB connection pool
-│   │   └── migrate.js            # Migration script
-│   ├── indexer/                  # Blockchain indexer
-│   │   ├── index.js              # Main indexer
-│   │   ├── provider.js           # Ethereum provider
-│   │   └── eventHandlers.js      # Event processors
+│   ├── services/                 # External services
+│   │   └── etherscan.js          # Etherscan API service
 │   ├── utils/                    # Utilities
 │   │   ├── logger.js             # Winston logger
 │   │   └── formatters.js         # Data formatters
@@ -79,15 +73,22 @@ compoundscan/
 ├── client/                       # React frontend
 │   ├── src/
 │   │   ├── components/           # React components
+│   │   │   └── Layout.jsx        # Main layout with navigation
 │   │   ├── pages/                # Page components
-│   │   ├── hooks/                # Custom hooks
+│   │   │   ├── Dashboard.jsx     # Main dashboard
+│   │   │   ├── Events.jsx        # Events browser
+│   │   │   ├── Transactions.jsx  # Transactions list
+│   │   │   ├── Addresses.jsx     # Address explorer
+│   │   │   ├── AddressDetail.jsx # Individual address view
+│   │   │   ├── TransactionDetail.jsx # Transaction details
+│   │   │   └── Query.jsx         # Date range query tool
+│   │   ├── hooks/                # Custom React hooks
 │   │   ├── utils/                # Frontend utilities
-│   │   ├── App.jsx               # Main app component
+│   │   ├── App.jsx               # Main app with routes
 │   │   └── main.jsx              # Entry point
 │   ├── index.html
 │   └── package.json
 ├── package.json
-├── env.example                   # Environment template
 └── README.md
 ```
 
@@ -96,14 +97,14 @@ compoundscan/
 ### Prerequisites
 
 - **Node.js** v18 or higher
-- **PostgreSQL** v15 or higher
-- **Ethereum RPC** (Alchemy, Infura, or public endpoint)
+- **Etherscan API Key** (free tier works)
+- **Ethereum RPC** (optional, for live data - Alchemy free tier works)
 
 ### 1. Clone & Install
 
 ```bash
-git clone <repository-url>
-cd compoundscan
+git clone https://github.com/itsored/CompoundScan.git
+cd CompoundScan
 
 # Install backend dependencies
 npm install
@@ -112,129 +113,71 @@ npm install
 cd client && npm install && cd ..
 ```
 
-### 2. Configure Environment
+### 2. Configure API Keys
+
+Edit `src/services/etherscan.js` and add your Etherscan API key:
+
+```javascript
+const ETHERSCAN_API_KEY = 'YOUR_ETHERSCAN_API_KEY';
+```
+
+(Optional) Edit `src/config/index.js` for RPC URL:
+
+```javascript
+SEPOLIA_RPC_URL: 'https://eth-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_KEY'
+```
+
+### 3. Start the Application
 
 ```bash
-# Copy environment template
-cp env.example .env
+# Terminal 1: Start backend
+node src/index.js
 
-# Edit .env with your configuration
+# Terminal 2: Start frontend
+cd client && npm run dev
 ```
 
-Required environment variables:
+### 4. Open the App
 
-```env
-# Database
-DATABASE_URL=postgresql://user:password@localhost:5432/compoundscan
-# Or individual settings:
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=compoundscan
-DB_USER=postgres
-DB_PASSWORD=your_password
-
-# Ethereum RPC (Sepolia)
-SEPOLIA_RPC_URL=https://eth-sepolia.g.alchemy.com/v2/YOUR_API_KEY
-
-# Server
-PORT=3001
-```
-
-### 3. Initialize Database
-
-```bash
-# Create database (if not exists)
-createdb compoundscan
-
-# Run migrations
-npm run db:migrate
-```
-
-### 4. Start the Application
-
-```bash
-# Development mode (both backend and frontend)
-npm run dev
-
-# Or run separately:
-npm run dev:server  # Backend on port 3001
-npm run dev:client  # Frontend on port 3000
-```
-
-### 5. Start the Indexer
-
-In a separate terminal:
-
-```bash
-# Start indexing Ethereum Mainnet (default)
-npm run index
-
-# Or specify network:
-npm run index SEPOLIA
-npm run index ETHEREUM_MAINNET
-```
+Navigate to `http://localhost:3000` in your browser.
 
 ## 📡 API Endpoints
 
-### Statistics
+### Live Data (from RPC)
 
 | Endpoint | Description |
 |----------|-------------|
-| `GET /api/stats/overview` | Protocol overview statistics |
-| `GET /api/stats/activity` | Activity over time |
-| `GET /api/stats/top-addresses` | Most active addresses |
-| `GET /api/stats/liquidations` | Liquidation statistics |
-| `GET /api/stats/contracts` | Tracked contracts info |
+| `GET /api/live/status` | Live protocol stats (supply, borrow, utilization) |
 
-### Events
+### Etherscan Data
 
 | Endpoint | Description |
 |----------|-------------|
-| `GET /api/events` | List all events (paginated) |
-| `GET /api/events/types` | Event types with counts |
-| `GET /api/events/tx/:txHash` | Events for a transaction |
+| `GET /api/etherscan/status` | API key configuration status |
+| `GET /api/etherscan/events` | List protocol events |
+| `GET /api/etherscan/events/types` | Event type counts |
+| `GET /api/etherscan/transactions` | List transactions |
+| `GET /api/etherscan/tx/:txHash` | Transaction details |
+| `GET /api/etherscan/addresses` | List active addresses |
+| `GET /api/etherscan/address/:address` | Address activity details |
+| `GET /api/etherscan/stats` | Overall protocol statistics |
+| `GET /api/etherscan/query` | Query addresses by date range |
 
-Query parameters: `page`, `limit`, `event_name`, `from_block`, `to_block`, `from_date`, `to_date`
+### Query Parameters
 
-### Transactions
+- `limit` - Number of results (default: 20)
+- `offset` - Pagination offset
+- `eventType` - Filter by event type
+- `startDate` / `endDate` - Date range filter (YYYY-MM-DD)
 
-| Endpoint | Description |
-|----------|-------------|
-| `GET /api/transactions` | List transactions |
-| `GET /api/transactions/:txHash` | Transaction details |
-
-### Addresses
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /api/addresses` | List all addresses |
-| `GET /api/addresses/:address` | Address activity |
-| `GET /api/addresses/:address/supplies` | Supply history |
-| `GET /api/addresses/:address/borrows` | Borrow history |
-
-### Search
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /api/search?q=<query>` | Search addresses, transactions |
-
-## 🔧 Compound V3 Contracts
+## 🔧 Compound V3 Contract
 
 ### Ethereum Sepolia (Testnet)
 
 | Contract | Address |
 |----------|---------|
 | cWETHv3 (Proxy) | `0x2943ac1216979aD8dB76D9147F64E61adc126e96` |
-
-### Ethereum Mainnet
-
-| Contract | Address |
-|----------|---------|
-| cUSDCv3 (Proxy) | `0xc3d688B66703497DAA19211EEdff47f25384cdc3` |
-| cWETHv3 (Proxy) | `0xA17581A9E3356d9A858b789D68B4d866e593aE94` |
-| cUSDTv3 (Proxy) | `0x3Afdc9BCA9213A35503b077a6072F3D0d5AB0840` |
-| Rewards | `0x1B0e765F6224C21223AeA2af16c1C46E38885a40` |
-| Configurator | `0x316f9708bB98af7dA9c68C1C3b5e79039cD336E3` |
+| Base Token (WETH) | `0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9` |
 
 ### Tracked Events
 
@@ -244,75 +187,80 @@ Query parameters: `page`, `limit`, `event_name`, `from_block`, `to_block`, `from
 - `WithdrawCollateral` - Collateral withdrawn
 - `AbsorbCollateral` - Liquidation (collateral seized)
 - `AbsorbDebt` - Liquidation (debt absorbed)
-- `BuyCollateral` - Collateral auction purchase
 - `Transfer` - Base token transfer
 - `TransferCollateral` - Collateral transfer
-- `RewardClaimed` - Reward tokens claimed
 
-## 📊 Database Schema
+## 🖥️ Pages
 
-### Core Tables
+### Dashboard
+- Live protocol statistics (Total Supply, Borrow, Utilization Rate)
+- Recent events feed
+- Top active addresses
 
-- `networks` - Blockchain networks (Sepolia, Mainnet)
-- `contracts` - Tracked contract addresses
-- `indexer_state` - Indexing progress per contract
+### Events
+- Browse all protocol events
+- Filter by event type
+- View event details and transaction links
 
-### Blockchain Data
+### Transactions
+- List of all contract transactions
+- Function names and parameters
+- Status and timestamp
 
-- `blocks` - Block metadata
-- `transactions` - Decoded transactions
-- `events` - All protocol events
+### Addresses
+- All addresses that interacted with the protocol
+- Transaction and event counts
+- Link to detailed view
 
-### Protocol-Specific
+### Query Explorer
+- Select date range
+- Find all addresses active in that period
+- View aggregated activity per address
+- Export results to CSV
 
-- `addresses` - Tracked addresses with stats
-- `supply_events` - Base token supplies
-- `supply_collateral_events` - Collateral deposits
-- `withdraw_events` - Withdrawals/borrows
-- `withdraw_collateral_events` - Collateral withdrawals
-- `liquidation_events` - Liquidations
-- `buy_collateral_events` - Collateral auctions
-- `reward_claims` - Reward distributions
-- `transfer_events` - Token transfers
+## 🎨 UI Features
 
-### Analytics
-
-- `protocol_snapshots` - Time-series protocol metrics
-- `account_snapshots` - Account balance history
+- Dark theme with modern glassmorphism design
+- Responsive layout (mobile-friendly)
+- Real-time data updates
+- Event type color coding
+- Address and transaction hash truncation with full copy
+- Etherscan links for verification
 
 ## 🛠️ Development
 
-### Running Tests
+### Tech Stack
 
-```bash
-npm test
-```
+**Backend:**
+- Node.js + Express
+- Ethers.js (blockchain interaction)
+- Etherscan API (data fetching)
+- Winston (logging)
 
-### Adding New Networks
+**Frontend:**
+- React 18 + Vite
+- React Router
+- Tailwind CSS
+- Lucide Icons
 
-1. Add network config to `src/config/contracts.js`
-2. Add contract addresses for the new network
-3. Run migrations to add network to database
-4. Start indexer with new network flag
+### Rate Limiting
 
-### Adding New Event Types
-
-1. Add event to ABI files in `src/config/abi/`
-2. Create handler in `src/indexer/eventHandlers.js`
-3. Add database table if needed
-4. Register handler in event handlers map
+The Etherscan service includes:
+- 350ms delay between API calls
+- 60-second response caching
+- Automatic retry on rate limit errors
 
 ## 🔗 Resources
 
 - [Compound V3 Documentation](https://docs.compound.finance/)
 - [Compound Finance GitHub](https://github.com/compound-finance)
-- [Comet Protocol](https://compound.finance/governance/proposals)
+- [Etherscan API Docs](https://docs.etherscan.io/)
+- [Sepolia Testnet Faucet](https://sepoliafaucet.com/)
 
 ## 📝 License
 
-MIT License - see [LICENSE](LICENSE) for details.
+MIT License
 
 ---
 
 Built with ❤️ for the Compound community
-
